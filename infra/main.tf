@@ -27,12 +27,12 @@ module "api_gateway" {
   }
 }
 
-resource "aws_apigatewayv2_stage" "example" {
+resource "aws_apigatewayv2_stage" "dev_stage" {
   api_id = module.api_gateway.apigatewayv2_api_id
   name   = "dev"
 }
 
-resource "aws_apigatewayv2_stage" "example" {
+resource "aws_apigatewayv2_stage" "prod_stage" {
   api_id = module.api_gateway.apigatewayv2_api_id
   name   = "prod"
 }
